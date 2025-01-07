@@ -1,7 +1,11 @@
 # .streamlit/config.toml
 [theme]
-primaryColor = "#d32f2f"         # Navagis red from the logo
-backgroundColor = "#ffffff"      # White background
+navagis_red = "#d32f2f"
+navagis_green = "#4caf50"
+navagis_blue = "#42a5f5"
+
+primaryColor = navagis_red         # Navagis red from the logo
+backgroundColor = navagis_blue      # White background
 secondaryBackgroundColor = "#f1f1f1" # Light gray for secondary sections
 textColor = "#333333"            # Dark gray text for readability
 font = "sans-serif"              # Clean, modern font

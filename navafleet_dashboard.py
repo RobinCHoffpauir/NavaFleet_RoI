@@ -18,6 +18,10 @@ def calculate_navafleet_metrics(vehicles_used, total_duration, stops_per_vehicle
     return navafleet_metrics
 
 def create_navafleet_dashboard():
+    navagis_red = "#d32f2f"
+    navagis_green = "#4caf50"
+    navagis_blue = "#42a5f5"
+
     st.title("NavaFleet ROI Dashboard")
     st.image("navagis_logo.jpeg", use_container_width=True)
     st.sidebar.header("Input Metrics")
@@ -31,16 +35,23 @@ def create_navafleet_dashboard():
         margin-bottom: 20px;
     }
     </style>
-    <div class="header">Welcome to the Navagis App</div>
+    <div class="header">NavaFleet ROI Estimator</div>
     """, unsafe_allow_html=True)
+   
     st.markdown("""
     <style>
-    .css-1d391kg {  # This targets Streamlit's sidebar
-        background-color: #f1f1f1;
-        color: #333333;
+    /* Target the sidebar */
+    section[data-testid="stSidebar"] {
+        background-color: f"{navagis_blue}"; /* Navagis Blue background */
+        color: #333333; /* Text color */
+    }
+    section[data-testid="stSidebar"] .css-1d391kg { /* Optional: Add more specificity */
+        font-family: sans-serif;
+        font-size: 16px;
     }
     </style>
     """, unsafe_allow_html=True)
+
 
     vehicles_used = st.sidebar.number_input("Vehicles Used", min_value=1, value=41)
     total_duration = st.sidebar.number_input("Total Duration (Hours)", min_value=1, value=555)
@@ -82,7 +93,7 @@ def create_navafleet_dashboard():
         change = ((navafleet - current) / current) * 100
         
         # Set annotation color dynamically
-        color = "green" if change > 0 else "red"
+        color = f"{navagis_green}" if change > 0 else f"{navagis_red}"
         
         # Annotate above NavaFleet bar
         ax.annotate(

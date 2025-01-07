@@ -101,4 +101,19 @@ def create_navafleet_dashboard():
     ax.set_title("Metrics Comparison")
     plt.xticks(rotation=0)
     st.pyplot(fig)
+
+    import streamlit as st
+
+    # Disclaimer at the bottom of the app
+    st.markdown("---")  # Horizontal rule for separation
+    st.write(
+        """
+        **Disclaimer:**
+        - This calculator provides an estimation of ROI based on the inputs you provide. 
+        - The results are not guaranteed to reflect the exact performance or outcomes in your organization.
+        - Real-world results may vary due to factors such as operational differences, market conditions, and unforeseen circumstances.
+        - This tool is for informational purposes only and should not be considered financial or investment advice. Please consult with a qualified professional for specific recommendations tailored to your organization.
+        """
+    )
+
 create_navafleet_dashboard()

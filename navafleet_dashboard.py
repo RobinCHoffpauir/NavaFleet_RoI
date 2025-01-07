@@ -19,7 +19,7 @@ def calculate_navafleet_metrics(vehicles_used, total_duration, stops_per_vehicle
 
 def create_navafleet_dashboard():
     st.title("NavaFleet ROI Dashboard")
-    st.image("navagis_logo.jpeg", use_column_width=True)
+    st.image("navagis_logo.jpeg", use_container_width=True)
     st.sidebar.header("Input Metrics")
     st.markdown("""
     <style>

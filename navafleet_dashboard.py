@@ -3,6 +3,9 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+
+
 def calculate_navafleet_metrics(vehicles_used, total_duration, stops_per_vehicle):
     improvements = {
         "vehicles_used_reduction": 51,
@@ -20,9 +23,29 @@ def calculate_navafleet_metrics(vehicles_used, total_duration, stops_per_vehicle
 
 def create_navafleet_dashboard():
     st.title("NavaFleet ROI Dashboard")
-    
+    st.image("navagis_logo.jpeg", use_column_width=True)
     st.sidebar.header("Input Metrics")
-    
+    st.markdown("""
+    <style>
+    .header {
+        color: #d32f2f;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    </style>
+    <div class="header">Welcome to the Navagis App</div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+    .css-1d391kg {  # This targets Streamlit's sidebar
+        background-color: #f1f1f1;
+        color: #333333;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     vehicles_used = st.sidebar.number_input("Vehicles Used", min_value=1, value=41)
     total_duration = st.sidebar.number_input("Total Duration (Hours)", min_value=1, value=555)
     stops_per_vehicle = st.sidebar.number_input("Stops per Vehicle", min_value=1, value=17)

@@ -1,10 +1,6 @@
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
-
 
 def calculate_navafleet_metrics(vehicles_used, total_duration, stops_per_vehicle):
     improvements = {
@@ -101,8 +97,6 @@ def create_navafleet_dashboard():
     ax.set_title("Metrics Comparison")
     plt.xticks(rotation=0)
     st.pyplot(fig)
-
-    import streamlit as st
 
     # Disclaimer at the bottom of the app
     st.markdown("---")  # Horizontal rule for separation

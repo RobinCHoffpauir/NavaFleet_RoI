@@ -32,8 +32,8 @@ st.markdown("""
 
 # Sidebar and input handling
 vehicles_used = st.sidebar.number_input("Vehicles Used", min_value=1, value=41)
-total_duration = st.sidebar.number_input("Total Duration (Hours)", min_value=1, value=555)
-stops_per_vehicle = st.sidebar.number_input("Stops per Vehicle", min_value=1, value=17)
+total_duration = st.sidebar.number_input("Total Duration (Hours)", min_value=1, max_value=700, value=555)
+stops_per_vehicle = st.sidebar.number_input("Stops per Vehicle", min_value=1, max_value=40, value=17)
 
 # Example calculations or visualizations here
 st.write("Your dashboard content goes here!")

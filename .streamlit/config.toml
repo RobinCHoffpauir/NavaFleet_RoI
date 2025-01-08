@@ -1,13 +1,12 @@
 # .streamlit/config.toml
+
 [theme]
+primaryColor = "#d32f2f"         # Navagis red for accents
+backgroundColor = "#f4f4f4"      # Light modern gray background
+secondaryBackgroundColor = "#ffffff" # Clean white for contrast
+textColor = "#333333"            # Dark gray for better readability
+font = "roboto"                  # Sleek, modern font
 
-
-primaryColor = "#d32f2f"         # Navagis red from the logo
-backgroundColor = "#42a5f5"      # Blue background
-secondaryBackgroundColor = "#4caf50" # Light gray for secondary sections
-textColor = "#333333"            # Dark gray text for readability
-font = "sans-serif"              # Clean, modern font
-
-# Set general options
 [general]
 showWarningOnDirectExecution = false
+
